@@ -1,0 +1,13 @@
+ ALT
+   count1 < 100 & c1 ? data
+     SEQ
+       count1 := count1 + 1
+       merged ! data
+   count2 < 100 & c2 ? data
+     SEQ
+       count2 := count2 + 1
+       merged ! data
+   status ? request
+     SEQ
+       out ! count1
+       out ! count2
